@@ -16,13 +16,13 @@
     <!-- Top Navigation -->
     <nav>
         <div class="flex items-center">
-            <img alt="HATRIXA Logo" style="height: 4rem; width: auto; object-fit: contain; max-width: 300px;" src="logo.png"/>
+            <a href="#home"><img alt="HATRIXA Logo" style="height: 4rem; width: auto; object-fit: contain; max-width: 300px; mix-blend-mode: multiply;" src="logo.png"/></a>
         </div>
         <div class="nav-links">
-            <a class="nav-link active" href="#" data-i18n="nav_work">Work</a>
-            <a class="nav-link" href="#" data-i18n="nav_studio">Studio</a>
-            <a class="nav-link" href="#" data-i18n="nav_services">Services</a>
-            <a class="nav-link" href="#" data-i18n="nav_contact">Contact</a>
+            <a class="nav-link active" href="#work" data-i18n="nav_work">Work</a>
+            <a class="nav-link" href="#studio" data-i18n="nav_studio">Studio</a>
+            <a class="nav-link" href="#work" data-i18n="nav_services">Services</a>
+            <a class="nav-link" href="#contact" data-i18n="nav_contact">Contact</a>
             
             <!-- Language Switcher -->
             <div class="lang-switch" style="margin-left: 2rem;">
@@ -35,7 +35,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="min-h-screen px-margin-page bg-background flex flex-col md:flex-row items-center justify-between gap-10" style="padding-top: 12rem; padding-bottom: 6rem;">
+    <section id="home" class="min-h-screen px-margin-page bg-background flex flex-col md:flex-row items-center justify-between gap-10" style="padding-top: 12rem; padding-bottom: 6rem;">
         <div class="flex-1 reveal-up" style="max-width: 650px;">
             <h1 class="font-display-lg text-stark-black" style="margin-bottom: 1.5rem; line-height: 1;" data-i18n="hero_title">
                 WE CREATE VISUALS THAT BUILD TRUST.
@@ -44,8 +44,8 @@
                 Photography and audiovisual production for companies, brands and spaces that understand the value of perception.
             </p>
             <div class="flex gap-6 animate-fade-up delay-200" style="flex-wrap: wrap; align-items: center;">
-                <a class="bg-stark-black text-pure-white px-10 py-5 font-label-caps" style="border-radius: 40px; transition: all 0.3s;" href="#" data-i18n="btn_view_work">VIEW WORK</a>
-                <a class="btn-secondary text-stark-black" style="border-bottom-color: var(--stark-black);" href="#" data-i18n="btn_start_project">START A PROJECT</a>
+                <a class="bg-stark-black text-pure-white px-10 py-5 font-label-caps" style="border-radius: 40px; transition: all 0.3s;" href="#work" data-i18n="btn_view_work">VIEW WORK</a>
+                <a class="btn-secondary text-stark-black" style="border-bottom-color: var(--stark-black);" href="#contact" data-i18n="btn_start_project">START A PROJECT</a>
             </div>
         </div>
         <div class="flex-1 reveal-up delay-100" style="display: flex; justify-content: flex-end;">
@@ -74,7 +74,7 @@
     </div>
 
     <!-- Introduction -->
-    <section class="bg-background px-margin-page py-section-gap grid grid-cols-1 md:grid-cols-12">
+    <section id="studio" class="bg-background px-margin-page py-section-gap grid grid-cols-1 md:grid-cols-12">
         <div class="md:col-start-2 md:col-span-10 text-center flex flex-col items-center justify-center">
             <span class="font-label-caps text-accent-rust reveal-up" style="display: block; margin-bottom: 2rem; text-align: center;" data-i18n="phil_tag">Philosophy</span>
             <h2 class="font-headline-lg text-stark-black reveal-up" style="margin-bottom: 3rem; text-align: center;" data-i18n="phil_title">
@@ -87,7 +87,7 @@
     </section>
 
     <!-- Services Preview -->
-    <section class="bg-canvas px-margin-page pb-section-gap pt-section-gap">
+    <section id="work" class="bg-canvas px-margin-page pb-section-gap pt-section-gap">
         <div class="services-grid">
             <!-- Corporate & Industrial -->
             <div class="service-card service-card-1 reveal-up">
@@ -145,7 +145,7 @@
                     <p class="font-body-lg text-pure-white opacity-70 max-w-xl" data-i18n="man_desc">
                         At Hatrixa, we navigate the thin line between art and commerce. Every frame is a calculated move to establish authority and desire.
                     </p>
-                    <a class="btn-primary" href="#" data-i18n="btn_get_touch">
+                    <a class="btn-primary" href="#contact" data-i18n="btn_get_touch">
                         GET IN TOUCH
                     </a>
                 </div>
@@ -154,14 +154,14 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-background w-full" style="border-top: 1px solid rgba(196,199,199,0.3);">
+    <footer id="contact" class="bg-background w-full" style="border-top: 1px solid rgba(196,199,199,0.3);">
         <div class="grid grid-cols-1 md:grid-cols-12 px-margin-page py-section-gap relative overflow-hidden" style="gap: 1.5rem; padding-bottom: 5rem;">
             <div class="absolute" style="bottom: -2.5rem; left: 50%; transform: translateX(-50%); pointer-events: none;">
                 <span class="font-display-xl text-stark-black" style="opacity: 0.05;">HATRIXA</span>
             </div>
             
             <div class="md:col-span-4">
-                <img alt="Logo" style="height: 8rem; margin-bottom: 2rem; object-fit: contain; max-width: 400px;" src="logo.png"/>
+                <img alt="Logo" style="height: 8rem; margin-bottom: 2rem; object-fit: contain; max-width: 400px; mix-blend-mode: multiply;" src="logo.png"/>
                 <p class="font-body-lg text-secondary max-w-xs" data-i18n="foot_desc">
                     Elevating brands through the lens of sophisticated visual culture.
                 </p>
@@ -170,9 +170,9 @@
             <div class="md:col-span-2">
                 <h4 class="font-label-caps text-stark-black" style="margin-bottom: 1.5rem;" data-i18n="foot_title_studio">Studio</h4>
                 <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
-                    <li><a class="font-body-md text-secondary nav-link" style="text-transform: none; letter-spacing: normal;" href="#" data-i18n="nav_work">Work</a></li>
-                    <li><a class="font-body-md text-secondary nav-link" style="text-transform: none; letter-spacing: normal;" href="#" data-i18n="foot_process">Process</a></li>
-                    <li><a class="font-body-md text-secondary nav-link" style="text-transform: none; letter-spacing: normal;" href="#" data-i18n="foot_about">About</a></li>
+                    <li><a class="font-body-md text-secondary nav-link" style="text-transform: none; letter-spacing: normal;" href="#work" data-i18n="nav_work">Work</a></li>
+                    <li><a class="font-body-md text-secondary nav-link" style="text-transform: none; letter-spacing: normal;" href="#studio" data-i18n="foot_process">Process</a></li>
+                    <li><a class="font-body-md text-secondary nav-link" style="text-transform: none; letter-spacing: normal;" href="#studio" data-i18n="foot_about">About</a></li>
                     <li><a class="font-body-md text-secondary nav-link" style="text-transform: none; letter-spacing: normal;" href="#" data-i18n="foot_journal">Journal</a></li>
                 </ul>
             </div>
