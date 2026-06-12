@@ -187,7 +187,7 @@ nav {
     top: 0;
     width: 100%;
     z-index: 50;
-    background: var(--background);
+    background: var(--pure-white);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     display: flex;
     justify-content: space-between;
