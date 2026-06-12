@@ -35,24 +35,43 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative h-screen w-full flex flex-col justify-end overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 z-10" style="background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, transparent 100%); mix-blend-mode: multiply;"></div>
-            <img alt="Hero Architecture" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWNW7-2oLVT-y3W2T7nENV614nfflBEgpk8F6F6rNpIYwYMXCVWUimIPqiCxxTmBIMQyz6AMtLigyRldd8eVa9QpyKrjkoKwrVtC8oEXhdKCuZw5IQPJznDI-MJ-Fq9DCr1jY1hT8FmteBZOguLerkjyPY4_7btQ7i7znmLUDvA7VlovbzivWYOXjvAiX7AAqcwoOk674ffxRv8EEM6XP_FtJci7-Kl_YdmFM_g4TuuD6uKvZTUdKj-1GS8Q-JLJO5ai-EuU2mtzU"/>
-        </div>
-        <div class="relative z-20 px-margin-page pb-section-gap w-full max-w-4xl" style="margin: 0 auto; padding-bottom: 8rem;">
-            <h1 class="font-display-lg text-pure-white animate-fade-up" style="margin-bottom: 1.5rem;" data-i18n="hero_title">
+    <section class="min-h-screen px-margin-page bg-background flex flex-col md:flex-row items-center justify-between gap-10" style="padding-top: 12rem; padding-bottom: 6rem;">
+        <div class="flex-1 reveal-up" style="max-width: 650px;">
+            <h1 class="font-display-lg text-stark-black" style="margin-bottom: 1.5rem; line-height: 1;" data-i18n="hero_title">
                 WE CREATE VISUALS THAT BUILD TRUST.
             </h1>
-            <p class="font-body-lg text-pure-white opacity-70 max-w-xl animate-fade-up delay-100" style="margin-bottom: 2.5rem;" data-i18n="hero_desc">
+            <p class="font-body-lg text-secondary" style="margin-bottom: 2.5rem; max-width: 500px;" data-i18n="hero_desc">
                 Photography and audiovisual production for companies, brands and spaces that understand the value of perception.
             </p>
-            <div class="flex gap-6 animate-fade-up delay-200" style="flex-wrap: wrap;">
-                <a class="btn-primary" href="#" data-i18n="btn_view_work">VIEW WORK</a>
-                <a class="btn-secondary" href="#" data-i18n="btn_start_project">START A PROJECT</a>
+            <div class="flex gap-6 animate-fade-up delay-200" style="flex-wrap: wrap; align-items: center;">
+                <a class="bg-stark-black text-pure-white px-10 py-5 font-label-caps" style="border-radius: 40px; transition: all 0.3s;" href="#" data-i18n="btn_view_work">VIEW WORK</a>
+                <a class="btn-secondary text-stark-black" style="border-bottom-color: var(--stark-black);" href="#" data-i18n="btn_start_project">START A PROJECT</a>
             </div>
         </div>
+        <div class="flex-1 reveal-up delay-100" style="display: flex; justify-content: flex-end;">
+            <img alt="Hero Graphic" style="width: 100%; max-width: 500px; height: 600px; object-fit: cover; border-radius: 40px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWNW7-2oLVT-y3W2T7nENV614nfflBEgpk8F6F6rNpIYwYMXCVWUimIPqiCxxTmBIMQyz6AMtLigyRldd8eVa9QpyKrjkoKwrVtC8oEXhdKCuZw5IQPJznDI-MJ-Fq9DCr1jY1hT8FmteBZOguLerkjyPY4_7btQ7i7znmLUDvA7VlovbzivWYOXjvAiX7AAqcwoOk674ffxRv8EEM6XP_FtJci7-Kl_YdmFM_g4TuuD6uKvZTUdKj-1GS8Q-JLJO5ai-EuU2mtzU"/>
+        </div>
     </section>
+
+    <!-- Marquee Banner -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            HATRIXA VISUAL STUDIO <span style="color:var(--accent-rust); margin: 0 1rem;">✦</span> 
+            AESTHETICS AS LOGIC <span style="color:var(--accent-rust); margin: 0 1rem;">✦</span> 
+            BUILDING TRUST <span style="color:var(--accent-rust); margin: 0 1rem;">✦</span> 
+            HATRIXA VISUAL STUDIO <span style="color:var(--accent-rust); margin: 0 1rem;">✦</span> 
+            AESTHETICS AS LOGIC <span style="color:var(--accent-rust); margin: 0 1rem;">✦</span> 
+            BUILDING TRUST <span style="color:var(--accent-rust); margin: 0 1rem;">✦</span> 
+        </div>
+        <div class="marquee-content">
+            HATRIXA VISUAL STUDIO <span style="color:var(--accent-rust); margin: 0 1rem;">✦</span> 
+            AESTHETICS AS LOGIC <span style="color:var(--accent-rust); margin: 0 1rem;">✦</span> 
+            BUILDING TRUST <span style="color:var(--accent-rust); margin: 0 1rem;">✦</span> 
+            HATRIXA VISUAL STUDIO <span style="color:var(--accent-rust); margin: 0 1rem;">✦</span> 
+            AESTHETICS AS LOGIC <span style="color:var(--accent-rust); margin: 0 1rem;">✦</span> 
+            BUILDING TRUST <span style="color:var(--accent-rust); margin: 0 1rem;">✦</span> 
+        </div>
+    </div>
 
     <!-- Introduction -->
     <section class="bg-background px-margin-page py-section-gap grid grid-cols-1 md:grid-cols-12">
@@ -68,16 +87,16 @@
     </section>
 
     <!-- Services Preview -->
-    <section class="bg-background px-margin-page pb-section-gap">
+    <section class="bg-canvas px-margin-page pb-section-gap pt-section-gap">
         <div class="services-grid">
             <!-- Corporate & Industrial -->
             <div class="service-card service-card-1 reveal-up">
                 <div class="overlay"></div>
                 <img alt="Industrial Visuals" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH2eExLNIy0OUi5xocvpq86NOP6JrP0sQp8OzHw8Q5WD4juKpZmAg1j3f4VPPs0psI7D9Xg3jRgFp8EFUF66DfDzvXT5B-IbUg-xHDyGlM_AJloyjHgubEYSJfCz0IpofbprStUKi12HyY1tzMsp2LOXX_K_ILY6rBRGGTlSCegXkyZoMsiXScbI_K0-6Ikp9OKGd48OsiZJKuPMLm9u5I461Rj8Rvs0JfZn3PVcdmKDEhccp4Pnp6GacZCq0u8jc8yWNY2UuteN4"/>
                 <div class="content">
-                    <span class="font-label-caps text-pure-white opacity-70" style="display: block; margin-bottom: 0.5rem;" data-i18n="serv_tag_1">01 / Services</span>
-                    <h3 class="font-headline-lg text-pure-white" data-i18n="serv_title_1">Corporate &amp; Industrial</h3>
-                    <a class="hover-arrow text-pure-white font-label-caps" style="margin-top: 1rem;" href="#">
+                    <span class="font-label-caps text-secondary" style="display: block; margin-bottom: 0.5rem;" data-i18n="serv_tag_1">01 / Services</span>
+                    <h3 class="font-headline-lg text-stark-black" data-i18n="serv_title_1">Corporate &amp; Industrial</h3>
+                    <a class="hover-arrow text-stark-black font-label-caps" style="margin-top: 1rem;" href="#">
                         <span data-i18n="btn_explore">EXPLORE WORK</span> <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
                 </div>
@@ -88,9 +107,9 @@
                 <div class="overlay"></div>
                 <img alt="Gastronomy Visuals" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfOuofwIzZeJfsQFNLi2FfaeofSS2oTEmeBkEdJHrYmD4BbP4KnmZxWj1XO6Bo5Xhx674Vq_ehbBkigeNlsWtodMN9jzEDKMxWrYWxUTQvikndRbPlS_orZ3mCHTs7BPX-879V4YC_AQIUPB0k1MKPrZK_8VMBlxex_QmuCbFrY0Rle0s1NasufYbMMADVbYTf8WVUEi0BNi3ydBHyOcGd0F-CAt5iv3SyPp5naQvhhib7eUUJq5bN1HxzsOa1miPJ_sEVY8d5l6M"/>
                 <div class="content">
-                    <span class="font-label-caps text-pure-white opacity-70" style="display: block; margin-bottom: 0.5rem;" data-i18n="serv_tag_2">02 / Services</span>
-                    <h3 class="font-headline-lg text-pure-white" data-i18n="serv_title_2">Gastronomy</h3>
-                    <a class="hover-arrow text-pure-white font-label-caps" style="margin-top: 1rem;" href="#">
+                    <span class="font-label-caps text-secondary" style="display: block; margin-bottom: 0.5rem;" data-i18n="serv_tag_2">02 / Services</span>
+                    <h3 class="font-headline-lg text-stark-black" data-i18n="serv_title_2">Gastronomy</h3>
+                    <a class="hover-arrow text-stark-black font-label-caps" style="margin-top: 1rem;" href="#">
                         <span data-i18n="btn_explore">EXPLORE WORK</span> <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
                 </div>
@@ -101,9 +120,9 @@
                 <div class="overlay"></div>
                 <img alt="Architecture Visuals" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWNW7-2oLVT-y3W2T7nENV614nfflBEgpk8F6F6rNpIYwYMXCVWUimIPqiCxxTmBIMQyz6AMtLigyRldd8eVa9QpyKrjkoKwrVtC8oEXhdKCuZw5IQPJznDI-MJ-Fq9DCr1jY1hT8FmteBZOguLerkjyPY4_7btQ7i7znmLUDvA7VlovbzivWYOXjvAiX7AAqcwoOk674ffxRv8EEM6XP_FtJci7-Kl_YdmFM_g4TuuD6uKvZTUdKj-1GS8Q-JLJO5ai-EuU2mtzU"/>
                 <div class="content">
-                    <span class="font-label-caps text-pure-white opacity-70" style="display: block; margin-bottom: 0.5rem;" data-i18n="serv_tag_3">03 / Services</span>
-                    <h3 class="font-headline-lg text-pure-white" data-i18n="serv_title_3">Architecture</h3>
-                    <a class="hover-arrow text-pure-white font-label-caps" style="margin-top: 1rem;" href="#">
+                    <span class="font-label-caps text-secondary" style="display: block; margin-bottom: 0.5rem;" data-i18n="serv_tag_3">03 / Services</span>
+                    <h3 class="font-headline-lg text-stark-black" data-i18n="serv_title_3">Architecture</h3>
+                    <a class="hover-arrow text-stark-black font-label-caps" style="margin-top: 1rem;" href="#">
                         <span data-i18n="btn_explore">EXPLORE WORK</span> <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
                 </div>

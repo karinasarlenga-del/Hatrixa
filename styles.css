@@ -5,7 +5,8 @@
 }
 
 :root {
-    --background: #FFFFFF;
+    --background: #F5F5F5;
+    --canvas-bg: #E2DFD8;
     --stark-black: #000000;
     --accent-rust: #B86A3C;
     --pure-white: #FFFFFF;
@@ -121,6 +122,7 @@ button {
 .text-secondary { color: var(--secondary); }
 
 .bg-background { background-color: var(--background); }
+.bg-canvas { background-color: var(--canvas-bg); }
 .bg-stark-black { background-color: var(--stark-black); }
 .bg-pure-white { background-color: var(--pure-white); }
 
@@ -185,8 +187,8 @@ nav {
     top: 0;
     width: 100%;
     z-index: 50;
-    background: #FFFFFF;
-    border-bottom: 1px solid rgba(196, 199, 199, 0.3);
+    background: var(--background);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -306,37 +308,58 @@ nav.shadow-sm {
 .service-card {
     position: relative;
     overflow: hidden;
-    group: hover;
+    background-color: var(--pure-white);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card .overlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0,0,0,0.2);
-    z-index: 10;
-    transition: background-color 0.5s;
-}
-
-.service-card:hover .overlay {
-    background-color: rgba(0,0,0,0.4);
+    display: none;
 }
 
 .service-card img {
     width: 100%;
-    height: 100%;
+    height: 70%;
     object-fit: cover;
+    border-radius: 40px 40px 0 0;
     transition: transform 1s;
 }
 
 .service-card:hover img {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .service-card .content {
-    position: absolute;
-    bottom: 3rem;
-    left: 3rem;
-    z-index: 20;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--pure-white);
+    border-radius: 0 0 40px 40px;
+}
+
+/* Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background: var(--stark-black);
+  color: var(--pure-white);
+  padding: 1.5rem 0;
+  display: flex;
+}
+.marquee-content {
+  display: inline-block;
+  animation: marquee 25s linear infinite;
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* Micro-animations */
