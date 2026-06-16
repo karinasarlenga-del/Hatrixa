@@ -1,8 +1,10 @@
 const translations = {
     en: {
+        "nav_home": "Home",
         "nav_work": "Work",
         "nav_studio": "Studio",
         "nav_services": "Services",
+        "nav_recent": "Recent Projects",
         "nav_contact": "Contact",
         "hero_title": "VISUALS THAT BUILD TRUST.",
         "hero_desc": "Photography and audiovisual production for companies, brands and spaces that understand the value of perception.",
@@ -48,9 +50,11 @@ const translations = {
         "gal_gastro_desc": "Explore our rich and appetizing visual documentation of culinary experiences."
     },
     es: {
+        "nav_home": "Inicio",
         "nav_work": "Trabajo",
         "nav_studio": "Estudio",
         "nav_services": "Servicios",
+        "nav_recent": "Proyectos Recientes",
         "nav_contact": "Contacto",
         "hero_title": "IMÁGENES QUE INSPIRAN CONFIANZA.",
         "hero_desc": "Fotografía y producción audiovisual para empresas, marcas y espacios que entienden el valor de la percepción.",
