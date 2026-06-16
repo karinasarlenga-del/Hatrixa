@@ -15,12 +15,12 @@ const translations = {
         "phil_title": "Your image speaks <br> before you do.",
         "phil_desc": "In a world saturated with noise, clarity is the ultimate luxury. We specialize in distilling the essence of brands and spaces through high-end visual storytelling. Our approach is surgical: eliminating distraction to elevate the core value of your perception.",
         "serv_tag_1": "01 / Services",
-        "serv_title_1": "Corporate & Industrial",
+        "serv_title_1": "Architecture",
         "btn_explore": "EXPLORE WORK",
         "serv_tag_2": "02 / Services",
-        "serv_title_2": "Gastronomy",
+        "serv_title_2": "Corporate & Industrial",
         "serv_tag_3": "03 / Services",
-        "serv_title_3": "Architecture",
+        "serv_title_3": "Gastronomy",
         "man_tag": "Manifesto",
         "man_quote": "\"WE BELIEVE THAT <span class='text-accent-rust'>BEAUTY</span> WITHOUT STRATEGY IS DECORATIVE, AND <span class='text-secondary'>STRATEGY</span> WITHOUT BEAUTY IS INVISIBLE.\"",
         "man_desc": "At Hatrixa, we navigate the thin line between art and commerce. Every frame is a calculated move to establish authority and desire.",
@@ -36,7 +36,14 @@ const translations = {
         "foot_nl_placeholder": "YOUR EMAIL",
         "foot_copyright": "© 2026 HATRIXA STUDIO. ALL RIGHTS RESERVED.",
         "foot_privacy": "Privacy Policy",
-        "foot_terms": "Terms of Service"
+        "foot_terms": "Terms of Service",
+        "gal_back": "Back",
+        "gal_arch_title": "Architecture",
+        "gal_arch_desc": "Explore our curated selection of architectural photography, focusing on structure, light, and material logic.",
+        "gal_corp_title": "Corporate & Industrial",
+        "gal_corp_desc": "Explore our visual narratives capturing the essence of corporate dynamics and industrial scale.",
+        "gal_gastro_title": "Gastronomy",
+        "gal_gastro_desc": "Explore our rich and appetizing visual documentation of culinary experiences."
     },
     es: {
         "nav_work": "Trabajo",
@@ -54,12 +61,12 @@ const translations = {
         "phil_title": "Tu imagen habla <br> antes que vos.",
         "phil_desc": "En un mundo saturado de ruido, la claridad es el máximo lujo. Nos especializamos en destilar la esencia de marcas y espacios a través de narrativas visuales de alto nivel. Nuestro enfoque es quirúrgico: eliminar la distracción para elevar el valor central de tu percepción.",
         "serv_tag_1": "01 / Servicios",
-        "serv_title_1": "Corporativo e Industrial",
+        "serv_title_1": "Arquitectura",
         "btn_explore": "EXPLORAR TRABAJO",
         "serv_tag_2": "02 / Servicios",
-        "serv_title_2": "Gastronomía",
+        "serv_title_2": "Corporativo e Industrial",
         "serv_tag_3": "03 / Servicios",
-        "serv_title_3": "Arquitectura",
+        "serv_title_3": "Gastronomía",
         "man_tag": "Manifiesto",
         "man_quote": "\"CREEMOS QUE LA <span class='text-accent-rust'>BELLEZA</span> SIN ESTRATEGIA ES DECORATIVA, Y LA <span class='text-secondary'>ESTRATEGIA</span> SIN BELLEZA ES INVISIBLE.\"",
         "man_desc": "En Hatrixa, navegamos la fina línea entre el arte y el comercio. Cada cuadro es un movimiento calculado para establecer autoridad y deseo.",
@@ -75,7 +82,14 @@ const translations = {
         "foot_nl_placeholder": "TU CORREO",
         "foot_copyright": "© 2026 HATRIXA STUDIO. TODOS LOS DERECHOS RESERVADOS.",
         "foot_privacy": "Política de Privacidad",
-        "foot_terms": "Términos de Servicio"
+        "foot_terms": "Términos de Servicio",
+        "gal_back": "Volver",
+        "gal_arch_title": "Arquitectura",
+        "gal_arch_desc": "Explorá nuestra cuidada selección de fotografía arquitectónica, enfocada en la estructura, la luz y la lógica material.",
+        "gal_corp_title": "Corporativo e Industrial",
+        "gal_corp_desc": "Explorá nuestras narrativas visuales que capturan la esencia de la dinámica corporativa y la escala industrial.",
+        "gal_gastro_title": "Gastronomía",
+        "gal_gastro_desc": "Explorá nuestra rica y apetitosa documentación visual de experiencias culinarias."
     }
 };
 
