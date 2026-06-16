@@ -82,6 +82,35 @@ function setLanguage(lang) {
         if (translations[lang] && translations[lang][key]) {
             if (el.tagName === 'INPUT' && el.hasAttribute('placeholder')) {
                 el.placeholder = translations[lang][key];
+            } else if (el.id === 'animated-heading') {
+                // Apply animation logic for the heading
+                const text = translations[lang][key];
+                const lines = text.split('\n'); // Split by \n or we can just split by word/char directly
+                // If it's the title, we might not have \n in translations, so we'll just animate it as one line or let it wrap.
+                el.innerHTML = '';
+                
+                let charDelay = 30;
+                let initialDelay = 50; // faster initial delay on lang switch
+                
+                // If the translation doesn't have \n, we just treat it as one line.
+                // The spans are inline-block so they will wrap naturally.
+                text.split('').forEach((char, charIndex) => {
+                    const span = document.createElement('span');
+                    span.textContent = char === ' ' ? '\u00A0' : char;
+                    span.style.opacity = '0';
+                    span.style.transform = 'translateX(-18px)';
+                    span.style.display = 'inline-block';
+                    span.style.transition = 'opacity 500ms ease, transform 500ms ease';
+                    
+                    const delay = initialDelay + (charIndex * charDelay);
+                    
+                    setTimeout(() => {
+                        span.style.opacity = '1';
+                        span.style.transform = 'translateX(0)';
+                    }, delay);
+                    
+                    el.appendChild(span);
+                });
             } else {
                 el.innerHTML = translations[lang][key];
             }

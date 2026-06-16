@@ -28,17 +28,24 @@
     </style>
 </head>
 <body>
-    <!-- Top Navigation (VEX) -->
+    <!-- Top Navigation (Hatrixa) -->
     <div class="fixed top-0 left-0 w-full z-50 px-6 md:px-12 lg:px-16 pt-6">
         <nav class="liquid-glass rounded-xl px-4 py-2 flex items-center justify-between w-full">
-            <div class="text-white text-2xl font-semibold tracking-tight">VEX</div>
+            <a href="#home" class="text-white text-2xl font-semibold tracking-tight uppercase" style="font-family: var(--font-heading);">HATRIXA</a>
             <div class="hidden md:flex items-center gap-8 text-sm text-gray-300">
-                <a href="#" class="hover:text-white transition-colors">Story</a>
-                <a href="#" class="hover:text-white transition-colors">Investing</a>
-                <a href="#" class="hover:text-white transition-colors">Building</a>
-                <a href="#" class="hover:text-white transition-colors">Advisory</a>
+                <a href="#work" class="hover:text-white transition-colors" data-i18n="nav_work">Work</a>
+                <a href="#studio" class="hover:text-white transition-colors" data-i18n="nav_studio">Studio</a>
+                <a href="#work" class="hover:text-white transition-colors" data-i18n="nav_services">Services</a>
+                <a href="#contact" class="hover:text-white transition-colors" data-i18n="nav_contact">Contact</a>
             </div>
-            <button class="bg-white text-black px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors">Start a Chat</button>
+            <div class="flex items-center gap-4">
+                <div class="lang-switch text-sm font-medium flex items-center gap-2">
+                    <button class="lang-btn hover:text-white transition-colors" data-lang="es">ES</button>
+                    <span class="text-white/20">|</span>
+                    <button class="lang-btn hover:text-white transition-colors" data-lang="en">EN</button>
+                </div>
+                <a href="#contact" class="hidden md:inline-block bg-white text-black px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors" data-i18n="btn_start_project">START A PROJECT</a>
+            </div>
         </nav>
     </div>
 
@@ -53,31 +60,24 @@
         
         <!-- Hero Content (Bottom of viewport) -->
         <div class="relative z-10 px-6 md:px-12 lg:px-16 flex-1 flex flex-col justify-end pb-12 lg:pb-16 w-full">
-            <div class="lg:grid lg:grid-cols-2 lg:items-end w-full gap-8">
+            <div class="w-full max-w-4xl">
                 <!-- Left Column - Main content -->
                 <div class="flex flex-col">
-                    <h1 id="animated-heading" class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal mb-4" style="letter-spacing: -0.04em;">
-                        <!-- JS injected -->
+                    <h1 id="animated-heading" class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 font-display-xl" style="letter-spacing: -0.04em; line-height: 1.1;" data-i18n="hero_title">
+                        WE CREATE VISUALS THAT BUILD TRUST.
                     </h1>
                     
-                    <p class="fade-in-element text-base md:text-lg text-gray-300 mb-5 max-w-2xl" data-delay="800" data-duration="1000">
-                        We back visionaries and craft ventures that define what comes next.
+                    <p class="fade-in-element text-base md:text-lg text-gray-300 mb-8 max-w-2xl font-body-lg" data-delay="800" data-duration="1000" data-i18n="hero_desc">
+                        Photography and audiovisual production for companies, brands and spaces that understand the value of perception.
                     </p>
                     
                     <div class="fade-in-element flex flex-wrap gap-4" data-delay="1200" data-duration="1000">
-                        <button class="bg-white text-black px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-                            Start a Chat
-                        </button>
-                        <button class="liquid-glass border border-white/20 text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-black transition-colors" style="z-index: 10;">
-                            Explore Now
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Right Column - Tag -->
-                <div class="flex items-end justify-start lg:justify-end mt-8 lg:mt-0 fade-in-element" data-delay="1400" data-duration="1000">
-                    <div class="liquid-glass border border-white/20 px-6 py-3 rounded-xl text-lg md:text-xl lg:text-2xl font-light">
-                        Investing. Building. Advisory.
+                        <a href="#work" class="bg-white text-black px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors uppercase" style="font-family: var(--font-heading); font-weight: 700; font-size: 12px; letter-spacing: 0.1em; display: inline-flex; align-items: center;" data-i18n="btn_view_work">
+                            VIEW WORK
+                        </a>
+                        <a href="#contact" class="liquid-glass border border-white/20 text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-black transition-colors uppercase" style="z-index: 10; font-family: var(--font-heading); font-weight: 700; font-size: 12px; letter-spacing: 0.1em; display: inline-flex; align-items: center;" data-i18n="btn_start_project">
+                            START A PROJECT
+                        </a>
                     </div>
                 </div>
             </div>
@@ -266,41 +266,8 @@
             // 1. Animated Heading
             const heading = document.getElementById('animated-heading');
             if (heading) {
-                const text = "Shaping tomorrow\nwith vision and action.";
-                const lines = text.split('\n');
-                heading.innerHTML = '';
-                
-                let charDelay = 30;
-                let initialDelay = 200;
-                
-                lines.forEach((line, lineIndex) => {
-                    const lineDiv = document.createElement('div');
-                    lineDiv.style.whiteSpace = 'nowrap';
-                    
-                    line.split('').forEach((char, charIndex) => {
-                        const span = document.createElement('span');
-                        span.textContent = char === ' ' ? '\u00A0' : char;
-                        span.style.opacity = '0';
-                        span.style.transform = 'translateX(-18px)';
-                        span.style.display = 'inline-block';
-                        span.style.transition = 'opacity 500ms ease, transform 500ms ease';
-                        
-                        // Delay formula from spec
-                        const lineLength = line.length;
-                        // To be exact to spec: (lineIndex * lineLength * charDelay) + (charIndex * charDelay)
-                        // Note: For multi-line staggered properly, using previous line length sum is better,
-                        // but sticking to exact spec formula:
-                        const delay = initialDelay + (lineIndex * lineLength * charDelay) + (charIndex * charDelay);
-                        
-                        setTimeout(() => {
-                            span.style.opacity = '1';
-                            span.style.transform = 'translateX(0)';
-                        }, delay);
-                        
-                        lineDiv.appendChild(span);
-                    });
-                    heading.appendChild(lineDiv);
-                });
+                // The text is already managed by translations.js, so we don't need to inject it here on DOMContentLoaded
+                // translations.js handles it directly inside setLanguage() which runs on DOMContentLoaded.
             }
 
             // 2. FadeIn Elements
