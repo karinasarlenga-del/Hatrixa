@@ -24,23 +24,21 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.95);
             justify-content: center;
             align-items: center;
-            padding: 2rem;
-            cursor: pointer;
         }
         .lightbox.active { display: flex; }
-        .lightbox img {
-            max-width: 100%;
-            max-height: 100%;
+        #lightbox-img {
+            max-width: 90vw;
+            max-height: 90vh;
             object-fit: contain;
-            border-radius: 8px;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body class="bg-black text-white font-sans">
-    <!-- Top Navigation (Hatrixa) -->
+    <!-- Top Navigation -->
     <div class="fixed top-0 left-0 w-full z-50 px-6 md:px-12 lg:px-16 pt-6">
         <nav class="liquid-glass rounded-xl px-4 py-2 flex items-center justify-between w-full">
             <a href="index.html" class="text-white text-2xl font-semibold tracking-tight uppercase" style="font-family: var(--font-heading);">HATRIXA</a>
@@ -70,12 +68,29 @@
             <p class="text-gray-400 text-lg md:text-xl max-w-2xl mb-16" data-i18n="gal_corp_desc">Explore our visual narratives capturing the essence of corporate dynamics and industrial scale.</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gallery-grid">
+                <!-- Group 1 -->
                 <img src="Corporativo e industrial.jpeg" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
-                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
-                <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1000&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
-                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1000&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
-                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
-                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1000&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&h=720&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
+                <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200&h=720&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
+                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1200&h=720&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&h=720&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
+                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1200&h=720&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
+
+                <!-- Group 2 -->
+                <img src="Corporativo e industrial.jpeg" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&h=720&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
+                <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200&h=720&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
+                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1200&h=720&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&h=720&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
+                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1200&h=720&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
+
+                <!-- Group 3 -->
+                <img src="Corporativo e industrial.jpeg" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&h=720&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
+                <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200&h=720&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
+                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1200&h=720&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&h=720&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
+                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1200&h=720&auto=format&fit=crop" class="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity" alt="Corporate">
             </div>
         </div>
     </section>
@@ -83,7 +98,6 @@
     <!-- Footer -->
     <footer id="contact" class="bg-background w-full" style="border-top: 1px solid rgba(255,255,255,0.05);">
         <div class="px-margin-page py-section-gap relative overflow-hidden flex flex-col" style="padding-bottom: 5rem; padding-top: 5rem;">
-            <!-- Footer Bottom Grid -->
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
                 <div class="md:col-span-6">
                     <h2 class="text-white text-3xl font-bold uppercase" style="font-family: var(--font-heading); margin-bottom: 1.5rem; letter-spacing: -0.02em;">HATRIXA</h2>
@@ -92,7 +106,6 @@
                     </p>
                     <a href="mailto:hatrixa.com@gmail.com" class="text-white hover:text-accent-rust transition-colors font-body-lg" style="text-decoration: underline; text-underline-offset: 4px;">hatrixa.com@gmail.com</a>
                 </div>
-                
                 <div class="md:col-span-2">
                     <h4 class="font-label-caps text-white" style="margin-bottom: 1.5rem;" data-i18n="foot_title_studio">Studio</h4>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
@@ -102,7 +115,6 @@
                         <li><a class="font-body-md text-secondary nav-link hover:text-white" style="text-transform: none; letter-spacing: normal;" href="#" data-i18n="foot_journal">Journal</a></li>
                     </ul>
                 </div>
-                
                 <div class="md:col-span-4">
                     <h4 class="font-label-caps text-white" style="margin-bottom: 1.5rem;" data-i18n="foot_title_nl">Newsletter</h4>
                     <p class="font-body-md text-secondary" style="margin-bottom: 1.5rem;" data-i18n="foot_nl_desc">Stay updated with our latest productions and insights.</p>
@@ -112,7 +124,6 @@
                     </form>
                 </div>
             </div>
-            
             <div class="md:col-span-12 flex flex-col md:flex-row justify-between items-center" style="margin-top: 8rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2.5rem;">
                 <span class="font-label-caps text-secondary" style="font-size: 10px;" data-i18n="foot_copyright">© 2026 HATRIXA STUDIO. ALL RIGHTS RESERVED.</span>
                 <div class="flex gap-8" style="margin-top: 1.5rem;">
@@ -123,29 +134,19 @@
         </div>
     </footer>
 
-    <!-- Lightbox Modal -->
+    <!-- Slideshow Lightbox Modal -->
     <div class="lightbox" id="lightbox">
-        <img src="" alt="Enlarged view" id="lightbox-img">
+        <button id="lightbox-close" class="material-symbols-outlined text-white text-4xl absolute top-8 right-8 z-50 hover:text-accent-rust transition-colors cursor-pointer bg-black/50 p-2 rounded-full">close</button>
+        <button id="lightbox-prev" class="material-symbols-outlined text-white text-5xl absolute left-4 md:left-8 z-50 hover:text-accent-rust transition-colors cursor-pointer bg-black/50 p-2 rounded-full">chevron_left</button>
+        
+        <div class="lightbox-content relative w-full h-full flex justify-center items-center" id="lightbox-close-area">
+            <img src="" alt="Enlarged view" id="lightbox-img" class="relative z-40 shadow-2xl">
+        </div>
+        
+        <button id="lightbox-next" class="material-symbols-outlined text-white text-5xl absolute right-4 md:right-8 z-50 hover:text-accent-rust transition-colors cursor-pointer bg-black/50 p-2 rounded-full">chevron_right</button>
     </div>
 
     <script src="translations.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            const galleryImages = document.querySelectorAll('.gallery-grid img');
-
-            galleryImages.forEach(img => {
-                img.addEventListener('click', () => {
-                    lightboxImg.src = img.src;
-                    lightbox.classList.add('active');
-                });
-            });
-
-            lightbox.addEventListener('click', () => {
-                lightbox.classList.remove('active');
-            });
-        });
-    </script>
+    <script src="gallery.js"></script>
 </body>
 </html>
