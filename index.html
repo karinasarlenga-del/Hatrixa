@@ -6,6 +6,21 @@
     <title>HATRIXA | Visual Production Studio</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -13,43 +28,59 @@
     </style>
 </head>
 <body>
-    <!-- Top Navigation -->
-    <nav>
-        <div class="flex items-center">
-            <a href="#home"><img alt="HATRIXA Logo" style="height: 4rem; width: auto; object-fit: contain; max-width: 300px; mix-blend-mode: multiply;" src="logo.png"/></a>
-        </div>
-        <div class="nav-links">
-            <a class="nav-link active" href="#work" data-i18n="nav_work">Work</a>
-            <a class="nav-link" href="#studio" data-i18n="nav_studio">Studio</a>
-            <a class="nav-link" href="#work" data-i18n="nav_services">Services</a>
-            <a class="nav-link" href="#contact" data-i18n="nav_contact">Contact</a>
-            
-            <!-- Language Switcher -->
-            <div class="lang-switch" style="margin-left: 2rem;">
-                <button class="lang-btn" data-lang="es">ES</button>
-                <span style="color: var(--outline-variant);">|</span>
-                <button class="lang-btn" data-lang="en">EN</button>
+    <!-- Top Navigation (VEX) -->
+    <div class="fixed top-0 left-0 w-full z-50 px-6 md:px-12 lg:px-16 pt-6">
+        <nav class="liquid-glass rounded-xl px-4 py-2 flex items-center justify-between w-full">
+            <div class="text-white text-2xl font-semibold tracking-tight">VEX</div>
+            <div class="hidden md:flex items-center gap-8 text-sm text-gray-300">
+                <a href="#" class="hover:text-white transition-colors">Story</a>
+                <a href="#" class="hover:text-white transition-colors">Investing</a>
+                <a href="#" class="hover:text-white transition-colors">Building</a>
+                <a href="#" class="hover:text-white transition-colors">Advisory</a>
             </div>
-        </div>
-        <button class="material-symbols-outlined text-stark-black" style="display: block; md:display: none;">menu</button>
-    </nav>
+            <button class="bg-white text-black px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors">Start a Chat</button>
+        </nav>
+    </div>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen px-margin-page bg-background flex flex-col md:flex-row items-center justify-between gap-10" style="padding-top: 12rem; padding-bottom: 6rem;">
-        <div class="flex-1 reveal-up" style="max-width: 650px;">
-            <h1 class="font-display-lg text-stark-black" style="margin-bottom: 1.5rem; line-height: 1;" data-i18n="hero_title">
-                WE CREATE VISUALS THAT BUILD TRUST.
-            </h1>
-            <p class="font-body-lg text-secondary" style="margin-bottom: 2.5rem; max-width: 500px;" data-i18n="hero_desc">
-                Photography and audiovisual production for companies, brands and spaces that understand the value of perception.
-            </p>
-            <div class="flex gap-6 animate-fade-up delay-200" style="flex-wrap: wrap; align-items: center;">
-                <a class="bg-stark-black text-pure-white px-10 py-5 font-label-caps" style="border-radius: 40px; transition: all 0.3s;" href="#work" data-i18n="btn_view_work">VIEW WORK</a>
-                <a class="btn-secondary text-stark-black" style="border-bottom-color: var(--stark-black);" href="#contact" data-i18n="btn_start_project">START A PROJECT</a>
+    <section id="home" class="relative w-full h-screen overflow-hidden bg-black text-white flex flex-col font-sans">
+        <!-- Video Background -->
+        <video 
+            src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260403_050628_c4e32401-fab4-4a27-b7a8-6e9291cd5959.mp4" 
+            class="absolute inset-0 w-full h-full object-cover z-0"
+            autoplay loop muted playsinline
+        ></video>
+        
+        <!-- Hero Content (Bottom of viewport) -->
+        <div class="relative z-10 px-6 md:px-12 lg:px-16 flex-1 flex flex-col justify-end pb-12 lg:pb-16 w-full">
+            <div class="lg:grid lg:grid-cols-2 lg:items-end w-full gap-8">
+                <!-- Left Column - Main content -->
+                <div class="flex flex-col">
+                    <h1 id="animated-heading" class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal mb-4" style="letter-spacing: -0.04em;">
+                        <!-- JS injected -->
+                    </h1>
+                    
+                    <p class="fade-in-element text-base md:text-lg text-gray-300 mb-5 max-w-2xl" data-delay="800" data-duration="1000">
+                        We back visionaries and craft ventures that define what comes next.
+                    </p>
+                    
+                    <div class="fade-in-element flex flex-wrap gap-4" data-delay="1200" data-duration="1000">
+                        <button class="bg-white text-black px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                            Start a Chat
+                        </button>
+                        <button class="liquid-glass border border-white/20 text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-black transition-colors" style="z-index: 10;">
+                            Explore Now
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Tag -->
+                <div class="flex items-end justify-start lg:justify-end mt-8 lg:mt-0 fade-in-element" data-delay="1400" data-duration="1000">
+                    <div class="liquid-glass border border-white/20 px-6 py-3 rounded-xl text-lg md:text-xl lg:text-2xl font-light">
+                        Investing. Building. Advisory.
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="flex-1 reveal-up delay-100" style="display: flex; justify-content: flex-end;">
-            <img alt="Hero Graphic" style="width: 100%; max-width: 500px; height: 600px; object-fit: cover; border-radius: 40px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWNW7-2oLVT-y3W2T7nENV614nfflBEgpk8F6F6rNpIYwYMXCVWUimIPqiCxxTmBIMQyz6AMtLigyRldd8eVa9QpyKrjkoKwrVtC8oEXhdKCuZw5IQPJznDI-MJ-Fq9DCr1jY1hT8FmteBZOguLerkjyPY4_7btQ7i7znmLUDvA7VlovbzivWYOXjvAiX7AAqcwoOk674ffxRv8EEM6XP_FtJci7-Kl_YdmFM_g4TuuD6uKvZTUdKj-1GS8Q-JLJO5ai-EuU2mtzU"/>
         </div>
     </section>
 
@@ -228,6 +259,63 @@
                 // Add staggered delays slightly for sibling elements
                 el.style.transitionDelay = `${(index % 3) * 150}ms`;
                 observer.observe(el);
+            });
+
+            // --- New Hero Section Animations ---
+            
+            // 1. Animated Heading
+            const heading = document.getElementById('animated-heading');
+            if (heading) {
+                const text = "Shaping tomorrow\nwith vision and action.";
+                const lines = text.split('\n');
+                heading.innerHTML = '';
+                
+                let charDelay = 30;
+                let initialDelay = 200;
+                
+                lines.forEach((line, lineIndex) => {
+                    const lineDiv = document.createElement('div');
+                    lineDiv.style.whiteSpace = 'nowrap';
+                    
+                    line.split('').forEach((char, charIndex) => {
+                        const span = document.createElement('span');
+                        span.textContent = char === ' ' ? '\u00A0' : char;
+                        span.style.opacity = '0';
+                        span.style.transform = 'translateX(-18px)';
+                        span.style.display = 'inline-block';
+                        span.style.transition = 'opacity 500ms ease, transform 500ms ease';
+                        
+                        // Delay formula from spec
+                        const lineLength = line.length;
+                        // To be exact to spec: (lineIndex * lineLength * charDelay) + (charIndex * charDelay)
+                        // Note: For multi-line staggered properly, using previous line length sum is better,
+                        // but sticking to exact spec formula:
+                        const delay = initialDelay + (lineIndex * lineLength * charDelay) + (charIndex * charDelay);
+                        
+                        setTimeout(() => {
+                            span.style.opacity = '1';
+                            span.style.transform = 'translateX(0)';
+                        }, delay);
+                        
+                        lineDiv.appendChild(span);
+                    });
+                    heading.appendChild(lineDiv);
+                });
+            }
+
+            // 2. FadeIn Elements
+            const fadeElements = document.querySelectorAll('.fade-in-element');
+            fadeElements.forEach(el => {
+                const delay = parseInt(el.getAttribute('data-delay') || '0', 10);
+                const duration = parseInt(el.getAttribute('data-duration') || '1000', 10);
+                
+                el.style.opacity = '0';
+                // Remove Tailwind transition classes to avoid conflict
+                el.style.transition = `opacity ${duration}ms ease`;
+                
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                }, delay);
             });
         });
     </script>
