@@ -4,7 +4,7 @@ import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 
 export function initHero3D() {
-  const container = document.getElementById('hero-container');
+  const container = document.getElementById('home');
   const canvas = document.getElementById('hero-canvas');
   if (!container || !canvas) return;
 
@@ -331,6 +331,9 @@ export function initHero3D() {
     if(newSection !== currentSectionIndex) {
       currentSectionIndex = newSection;
       
+      // Clear any previous flicker animations to prevent memory leaks
+      if(window.gsap) window.gsap.killTweensOf('.title-char');
+
       sections.forEach((sec, idx) => {
         if (!sec) return;
         if (idx === newSection) {
@@ -338,10 +341,27 @@ export function initHero3D() {
           const chars = sec.querySelectorAll('.title-char');
           
           if(window.gsap) {
+             // Reset colors
+             window.gsap.set(chars, { color: '#ffffff', textShadow: 'none' });
+             
              window.gsap.fromTo(chars, 
                 { y: 200, opacity: 0 }, 
                 { y: 0, opacity: 1, duration: 1.5, stagger: 0.05, ease: "power4.out", overwrite: true }
              );
+
+             // If this is the "Hatrixa" section (index 2), add the flicker effect
+             if (idx === 2) {
+               window.gsap.to(chars, {
+                 color: "#050505",
+                 textShadow: "0px 0px 20px rgba(255,255,255,0.9)",
+                 duration: 1.2,
+                 repeat: -1,
+                 yoyo: true,
+                 ease: "power2.inOut",
+                 delay: 1.5, // Start after the enter animation finishes
+                 stagger: 0.1 // Stagger the flicker slightly for a more organic feel
+               });
+             }
           }
         } else {
           sec.style.opacity = '0';
