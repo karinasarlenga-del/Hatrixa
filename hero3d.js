@@ -354,12 +354,12 @@ export function initHero3D() {
                window.gsap.to(chars, {
                  color: "#050505",
                  textShadow: "0px 0px 20px rgba(255,255,255,0.9)",
-                 duration: 1.2,
+                 duration: 0.8,
                  repeat: -1,
                  yoyo: true,
                  ease: "power2.inOut",
                  delay: 1.5, // Start after the enter animation finishes
-                 stagger: 0.1 // Stagger the flicker slightly for a more organic feel
+                 stagger: 0.05 // Stagger the flicker slightly for a more organic feel
                });
              }
           }
@@ -403,6 +403,38 @@ export function initHero3D() {
 
   window.addEventListener('scroll', handleScroll);
   handleScroll(); // init
+
+  // Re-split text and re-apply animations when language changes
+  document.addEventListener('languageChanged', () => {
+    sections.forEach(sec => {
+      if(sec) {
+        const h1 = sec.querySelector('h1');
+        if(h1) splitText(h1);
+      }
+    });
+
+    if (currentSectionIndex !== -1 && window.gsap) {
+      const activeSec = sections[currentSectionIndex];
+      if (activeSec) {
+        const chars = activeSec.querySelectorAll('.title-char');
+        window.gsap.killTweensOf('.title-char');
+        // Reset colors and opacity for new spans
+        window.gsap.set(chars, { color: '#ffffff', textShadow: 'none', y: 0, opacity: 1 });
+        
+        if (currentSectionIndex === 2) {
+          window.gsap.to(chars, {
+            color: "#050505",
+            textShadow: "0px 0px 20px rgba(255,255,255,0.9)",
+            duration: 0.8,
+            repeat: -1,
+            yoyo: true,
+            ease: "power2.inOut",
+            stagger: 0.05
+          });
+        }
+      }
+    }
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {

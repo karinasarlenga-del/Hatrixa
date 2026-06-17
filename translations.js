@@ -6,6 +6,9 @@ const translations = {
         "nav_services": "Services",
         "nav_recent": "Recent Projects",
         "nav_contact": "Contact",
+        "hero_word_1": "Perception",
+        "hero_word_2": "Strategic",
+        "hero_word_3": "Hatrixa",
         "hero_title": "VISUALS THAT BUILD TRUST.",
         "hero_desc": "Photography and audiovisual production for companies, brands and spaces that understand the value of perception.",
         "btn_view_work": "VIEW WORK",
@@ -56,6 +59,9 @@ const translations = {
         "nav_services": "Servicios",
         "nav_recent": "Proyectos Recientes",
         "nav_contact": "Contacto",
+        "hero_word_1": "Percepción",
+        "hero_word_2": "Estratégica",
+        "hero_word_3": "Hatrixa",
         "hero_title": "IMÁGENES QUE INSPIRAN CONFIANZA.",
         "hero_desc": "Fotografía y producción audiovisual para empresas, marcas y espacios que entienden el valor de la percepción.",
         "btn_view_work": "VER TRABAJO",
@@ -153,6 +159,8 @@ function setLanguage(lang) {
             btn.classList.remove('active');
         }
     });
+
+    document.dispatchEvent(new Event('languageChanged'));
 }
 
 document.addEventListener('DOMContentLoaded', () => {
